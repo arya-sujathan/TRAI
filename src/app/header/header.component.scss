@@ -1,0 +1,93 @@
+
+header {
+   display: flex;
+    background-color: white;
+    border-bottom: 0.5px solid rgba(91, 91, 91, 0.47);
+    height: 8vh;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .main-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:1% ;
+    padding-right: 1%;
+    
+   
+  }
+  
+  header .search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .actions {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: end;
+  }
+  
+  .actions label {
+    margin-right: 10px;
+  }
+  
+  .actions button {
+    margin-left: 10px;
+    padding: 2% 6%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .actions .buy {
+    background: rgba(1, 196, 62, 1);
+  }
+  
+  .actions .buy:hover {
+    background-color: darkgreen;
+    border: none;
+  }
+  
+  .actions .sell {
+    background: rgba(249, 249, 249, 1);
+    border: 0.5px solid rgba(28, 29, 33, 0.42);
+    color:rgba(28, 29, 33, 0.42);
+   font-weight: 600; 
+  }
+  
+  .actions .sell:hover {
+    background-color: rgba(28, 29, 33, 0.42);
+    color: darkgreen;
+  }
+  .actions .close {
+    background: rgba(249, 249, 249, 1);
+    border: 0.5px solid rgba(28, 29, 33, 0.42);
+    color:rgba(28, 29, 33, 0.42);
+   font-weight: 600; 
+  }
+  
+  .actions .close:hover {
+    background-color: rgba(28, 29, 33, 0.42);
+    color: darkgreen;
+  }
+  
+  
+  .user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+.toggle-button{
+    visibility: hidden;
+    border: none;
+}
+@media (max-width:550px) {
+    .toggle-button{
+        visibility: visible;
+
+    }
+  }

@@ -1,0 +1,51 @@
+{
+  "name": "trai-frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "prod": "ng build --configuration production && npx http-server -p 8080 -c-1 ./dist/your-angular-project"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^17.3.9",
+    "@angular/cdk": "^17.3.10",
+    "@angular/common": "^17.3.9",
+    "@angular/compiler": "^17.3.9",
+    "@angular/core": "^17.3.9",
+    "@angular/forms": "^17.3.10",
+    "@angular/material": "^17.3.10",
+    "@angular/platform-browser": "^17.3.9",
+    "@angular/platform-browser-dynamic": "^17.3.9",
+    "@angular/router": "^17.3.9",
+    "@ng-bootstrap/ng-bootstrap": "^16.0.0",
+    "bootstrap": "^5.3.3",
+    "clone": "^2.1.2",
+    "jquery": "^3.7.1",
+    "ngx-perfect-scrollbar": "^10.1.1",
+    "ngx-spinner": "^17.0.0",
+    "ngx-toastr": "^18.0.0",
+    "popper.js": "^1.16.1",
+    "rxjs": "~7.5.0",
+    "sweetalert2": "^11.11.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.6"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.7",
+    "@angular/cli": "~17.3.7",
+    "@angular/compiler-cli": "^17.3.9",
+    "@types/jasmine": "~4.0.0",
+    "http-server": "^14.1.1",
+    "jasmine-core": "~4.3.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~5.4.5"
+  }
+}

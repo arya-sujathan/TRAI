@@ -1,0 +1,230 @@
+/* Container styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f8f8f8;
+  }
+  
+  .login-container {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    min-width: 60vw;
+    min-height: 90vh;
+    max-width: 80vw; /* Adjust as needed */
+    max-height: 95vh; /* Adjust as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    margin: auto; /* Center horizontally */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .login-container {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  
+  
+ /* Left Section */
+.left-section {
+  flex: 1;
+  background-color: #1C1D21;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.left-section .content {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-img {
+  width: 40%; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.highlight {
+  color: #4CAF50; /* Matching the green color from your design */
+}
+
+.illustration-img {
+  width: 100%; /* Adjust as needed */
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+
+@media  (min-width: 2050px) and (max-width:3000px)  {
+  .login-box {
+    scale: 150%; /* Adjust width for very big screens */
+  }
+}
+/* For very big screens */
+@media  (min-width: 3000px)   {
+  .login-box {
+    scale: 200%; /* Adjust width for very big screens */
+  }
+}
+
+.login-box {
+  text-align: center;
+  width: 90%; /* Adjust width to fill most of the right section */
+  max-width: 400px; /* Add a max-width to prevent it from becoming too wide */
+}
+
+.logo {
+  width: 100%; /* Make the logo responsive */
+  max-width: 250px; /* Add a max-width to prevent it from becoming too wide */
+}
+
+h2 {
+  font-size: 1.3em; /* Adjust font size */
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #4CAF50; /* Matching the green color from your design */
+  margin-bottom: 15px; /* Adjust margin as needed */
+}
+
+.form-group {
+  margin-bottom: 10px; /* Adjust margin as needed */
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px; /* Adjust margin as needed */
+  color: #333;
+}
+
+input {
+  width: calc(100% - 20px); /* Adjust input width to account for padding and border */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  width: calc(100% - 20px); /* Adjust input width to account for padding and border */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+
+
+  
+  .login-btn:hover {
+    background-color: #45a049;
+  }
+  .bordered-div {
+    border: 8px solid white; /* You can adjust the size and style of the border */
+    padding: 20px; /* Optional: Adds space inside the div */
+    // background-color: #333; /* Optional: Just to contrast the white border */
+    color: white; /* Optional: Text color */
+}  
+.curved-div{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.bg-container {
+    display: flex;
+    height: 100vh; /* Use the full height of the viewport */
+    width: 100%; /* Full width */
+}
+
+.bg-left-section, .bg-right-section {
+    flex: 1;
+}
+
+.bg-left-section {
+    background-color: #000; /* Black background */
+    color: white; /* White text for readability */
+}
+
+.bg-right-section {
+    background-color: #fff; /* White background */
+    color: black; /* Black text for readability */
+}
+
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Lower z-index so it stays behind the content */
+  }
+  
+  .layer1 {
+    background-color: #000; /* Black background */
+    color: white; /* White text for readability */
+  }
+  
+  .layer2 {
+    background-color: #fff; /* White background */
+    color: black; 
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: black;
+  }
+
+  .content {
+    // position: relative;
+    z-index: 1; /* Ensure content is above background */
+    height: 100%;
+  }
+  @media  (max-width: 500px)   {
+    .login-container {
+      width: 80vw; /* Adjust width for very big screens */
+    }
+  }

@@ -1,0 +1,100 @@
+<div class="add-user-container ">
+ <!----------------------------- sidebar --------------------- -->
+ <div class="sidebar">
+    
+  <app-layout></app-layout>
+
+</div>
+<!-- -------------------------------------------------------------- -->
+ <!-- --------------------------main content------------------------- -->
+ <div class="main-content">
+  <app-header></app-header>
+
+  <div class="content">
+  <div style="padding: 1%;background-color: #f9f9f9;border-radius: 10px;">
+    <div class ="heading">
+      <h1>User List</h1>
+      <div class="search-filter">
+        <div class="input-container">
+          <input class="filter-input" matInput (keyup)="applyFilter($event)" placeholder="Filter">
+          <mat-icon>search</mat-icon>
+        </div>
+  
+        <button mat-button [matMenuTriggerFor]="sortMenu" class="sort-btn">
+          Sort
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu class="mat-menu" #sortMenu="matMenu" xPosition="before" yPosition="below">
+          <button mat-menu-item (click)="sortData('username')">(A-Z / Z-A)</button>
+
+          <button mat-menu-item (click)="sortData('date_of_registration')">Registration Date</button>
+        </mat-menu>
+      </div>
+     </div>
+      <div class="data-table">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mat-table" *ngIf="dataSource"  matSort>
+          <!-- Serial Number Column -->
+          <ng-container matColumnDef="serialno">
+            <th mat-header-cell *matHeaderCellDef style="border-top-left-radius: 10px !important;"> Sl No </th>
+            <td mat-cell *matCellDef="let element"> {{element.serialno}} </td>
+          </ng-container>
+  
+          <!-- User ID Column -->
+          <ng-container matColumnDef="username">
+            <th mat-header-cell *matHeaderCellDef> User ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+          </ng-container>
+  
+          <!-- Date of Registration Column -->
+          <ng-container matColumnDef="date_of_registration">
+            <th mat-header-cell *matHeaderCellDef> Date of Registration </th>
+            <td mat-cell *matCellDef="let element"> {{element.date_of_registration}} </td>
+          </ng-container>
+  
+          <!-- Whatsapp No Column -->
+          <ng-container matColumnDef="whatsapp_number">
+            <th mat-header-cell *matHeaderCellDef> Whatsapp No </th>
+            <td mat-cell *matCellDef="let element"> {{element.whatsapp_number}} </td>
+          </ng-container>
+  
+          <!-- Mail ID Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Mail ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+  
+          <!-- Broker Column -->
+          <ng-container matColumnDef="broker">
+            <th mat-header-cell *matHeaderCellDef> Broker </th>
+            <td mat-cell *matCellDef="let element"> {{element.broker}} </td>
+          </ng-container>
+  
+          <!-- Server ID Column -->
+          <ng-container matColumnDef="server_id">
+            <th mat-header-cell *matHeaderCellDef> Server ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.server_id}} </td>
+          </ng-container>
+  
+          <!-- Date of Expiry Column -->
+          <ng-container matColumnDef="date_of_expiry">
+            <th mat-header-cell *matHeaderCellDef style="border-top-right-radius: 10px !important;"> Date of Expiry </th>
+            <td mat-cell *matCellDef="let element"> {{element.date_of_expiry}} </td>
+          </ng-container>
+  
+          <!-- Header and Row Definitions -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        
+        <div *ngIf="!dataSource" class="no-data">
+          No users found
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+ <!-- --------------------------------------------------------------- -->
+</div>
+ 
+ 

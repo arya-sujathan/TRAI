@@ -1,0 +1,285 @@
+.add-user-container{
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+}
+  
+
+
+
+
+.main-content{
+  // margin-left: calc();
+  overflow: auto;
+  flex: 1;
+  height: 100vh;
+}
+
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .alert {
+    margin-top: 20px;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 1% 2%;
+    background-color: white;
+  
+  }
+  .user-form{
+    border-radius: 8px;
+    padding: 1% 1.5%;
+
+    background-color: #f9f9f9;
+
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  h2 {
+    text-align: left;
+    margin-left: 1%;
+    margin-bottom: 1% !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    // font-family: Poppins;
+
+
+  }
+  
+
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin: 0 1%;
+     display: flex;
+  padding-bottom: 1.5%;
+  }
+
+  .fg-right {
+    justify-content: end;
+  }
+  
+  .form-group label {
+    width: 30%;
+    align-self: flex-start;
+    font-size:medium;
+    font-weight: 400;
+    
+  }
+  
+  .form-group .form-control{
+    width: 60%;
+    padding: 1%;
+    // box-sizing: border-box;
+    border: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+
+  }
+
+  select{
+    width: 62%;
+    padding: 1%;
+    // box-sizing: border-box;
+    border: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+
+  }
+  
+  .btn {
+    padding: .5em 1.5em;
+    border-radius: 4px;
+    width: 5em;
+    text-align: center;
+  }
+  input:focus {
+    border-color: #28a745;
+    outline-color: #28a745; /* To remove the default outline */
+}
+select:focus {
+  border-color: #28a745;
+  outline-color: #28a745; /* To remove the default outline */
+} 
+
+.btn-secondary {
+    text-align: center;
+
+    background-color: white;
+    border:1px solid #6c757d;
+    color: #6c757d;
+    margin-right: 10px; 
+    width: 5em;
+    padding: 0;
+
+  }
+  .btn-secondary:hover{
+    background-color:#6c757d ;
+    color: white;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+    color: white;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .justify-content-end {
+    justify-content: flex-end;
+  }
+
+
+
+
+.content {
+  margin-top: 20px;
+}
+
+.data-table {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.data-table .table-header,
+.data-table .table-row {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.data-table .table-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.data-table .table-row div {
+  flex: 1;
+  text-align: center;
+}
+
+.no-data {
+  background-color: #ffcccc;
+  color: #cc0000;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn-group{
+  display: flex;
+  justify-content: end;
+  
+  width: 100%;
+}
+.text-danger{
+  color: #cc0000;
+}
+/* Fix for Angular Material Table */
+.mat-elevation-z8 {
+  background-color: white !important;
+}
+
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+
+//----------------------------------input group------------------------------------
+
+.input-field{
+  width: 100%;
+  padding:1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  // box-sizing: border-box;
+  border: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+
+}
+.field-class{
+width: 61%;
+  // box-sizing: border-box;
+  border: none;
+  background-color: #f9f9f9;
+}
+
+//---------------------------------------------------------------------------------
+
+// -----------------------------------password toggle----------------------------------
+.password-input {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 0px; /* Adjust as needed */
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+outline: none;
+}
+
+
+.password-toggle-btn mat-icon {
+  font-size: 24px; /* Adjust as needed */
+  scale: .8;
+}
+//-----------------------------------------------------------------
+.bottom{
+padding-bottom: 0% !important;
+}
+
+@media (max-width: 850px) {
+ .fg-right{
+  justify-content: flex-start;
+ }
+ .form-row{
+  flex-direction: column;
+ }
+ .form-group label{
+  font-size:small;
+ }
+ .btn-group{
+  width: 92%;
+}
+
+@media (max-width:550px) {
+ .sidebar{
+  width: 0;
+// visibility: hidden !important;
+  }
+}
+}

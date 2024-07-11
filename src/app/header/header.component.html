@@ -1,0 +1,20 @@
+<header>
+   <div class="main-container">
+    <button  (click)="toggleSidenav()"   class="toggle-button"><mat-icon>dehaze</mat-icon></button>
+    <div class="search-bar">
+        <!-- <input type="text" placeholder="Search"> -->
+        <!-- <button class="add-user">Add User</button> -->
+      </div>
+      <div class="actions">
+        <!-- <label for="start-toggle">Start</label>
+        <input type="radio" id="start-toggle"> -->
+        <button mat-button (click)="openDialog('buy')" class="buy">Buy</button>
+        <button mat-button (click)="openDialog('sell')" class="sell">Sell</button>
+        <button mat-button (click)="openConfirmationDialog()" class="close">Close</button>
+  
+        <div class="user-avatar">
+          <img src="assets/avatar.jpeg" alt="User Avatar" (click)="openLogout()">
+        </div>
+      </div>
+   </div>
+  </header>

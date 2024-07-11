@@ -1,0 +1,9 @@
+<!-- confirmation-dialog.component.html -->
+<span mat-dialog-title class="dialog-title">Confirm</span>
+<mat-dialog-content>
+  <p class="confirmation-text">Are you sure you want to proceed?</p>
+  <div class="btn-group">
+    <button class="btn btn-secondary" mat-button (click)="onNoClick()">Cancel</button>
+    <button class="btn btn-success" mat-button (click)="onConfirm()">Ok</button>
+  </div>
+</mat-dialog-content>

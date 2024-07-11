@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="background"></div>
+    <!-- <div class="background-layer layer2">
+    </div> -->
+  
+    <div class="content">
+      <div class="login-container curved-div">
+        <div class="left-section bordered-div curved-div">
+          <div class="content ">
+            <img src="assets/robot.png" alt="Robot" class="robot-img">
+            <p class="p-text">Lorem ipsum dolor sit amet, consectetur <span class="highlight">adipiscing elit.</span></p>
+            <img src="assets/illustration.svg" alt="Illustration" class="illustration-img">
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="login-box">
+            <img src="assets/logo.svg" alt="TRAI" class="logo">
+            <h2>Login</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="username">User Name :</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required formControlName="username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password :</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required formControlName="password">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="login-btn" [disabled]="loginForm.invalid">Login</button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

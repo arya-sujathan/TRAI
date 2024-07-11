@@ -1,0 +1,77 @@
+::ng-deep .mat-mdc-dialog-surface {
+    background-color: #f9f9f9 !important;
+    } 
+::ng-deep .mdc-dialog__container{
+    min-width: 25vw !important;
+    overflow: auto;
+    border:1px solid #28a745 !important;
+
+}
+
+label {
+    color: black;
+    width: 60%;
+    font-size: small;
+}
+.form-group {
+ 
+     display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  }
+  input{
+    width: 80%;
+        border: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+
+  }
+span{
+  padding-left: 24px;
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: larger;
+}
+
+  .btn-group{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+  .btn {
+    // padding: .5em 1.5em;
+    border-radius: 4px;
+    // width: 2em;
+    text-align: center;
+  height: 20%;
+  }
+  
+  .btn-secondary {
+    text-align: center;
+
+    background-color: white;
+    border:1px solid #6c757d;
+    color: #6c757d !important;
+    margin-right: 5px; 
+    
+    
+    }
+    .btn-secondary:hover{
+    background-color:#6c757d ;
+    color: white;
+    }
+    
+    .btn-success {
+      background-color: #28a745;
+      border: none;
+      width: 4em;
+      padding: 1px;
+    color: white;
+  }
+  input:focus {
+    border-color: #28a745;
+    outline-color: #28a745; /* To remove the default outline */
+} 
+::ng-deep .mdc-button{
+min-width: unset !important;
+}

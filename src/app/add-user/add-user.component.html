@@ -1,0 +1,178 @@
+<div class="add-user-container ">
+  <!----------------------------- sidebar --------------------- -->
+  <div class="sidebar">
+  
+    <app-layout></app-layout>
+
+  </div>
+<!-- -------------------------------------------------------------- -->
+<!-- ---------------------------------main content--------------------------------------- -->
+
+<div class="main-content">
+
+    <app-header></app-header>  
+      <div class="container">
+        
+        <div class="user-form">
+          <h2>Add User</h2>
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              
+              <!-- account name -->
+              
+              <div class="form-group col-md-6" [ngClass]="{ 'bottom': userForm.get('account_name')?.invalid && userForm.get('account_name')?.touched }">  
+                <label for="account_name">Account Name :</label>
+                <div class="field-class">
+                  <input id="account_name" required formControlName="account_name" type="text"  class="input-field" placeholder="Account Name" />
+                <div *ngIf="userForm.get('account_name')?.invalid && userForm.get('account_name')?.touched">
+                  <small class="text-danger">Account name is required.</small>
+                </div>
+                </div>
+              </div>
+              
+              <!-- username -->
+
+              <div class="form-group col-md-6 fg-right" [ngClass]="{ 'bottom': userForm.get('username')?.invalid && userForm.get('username')?.touched }">
+                <label for="username">User Name :</label>
+                <div class="field-class">
+                  <input id="username" required formControlName="username" type="text"  class="input-field" placeholder="User Name" />
+                <div *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched">
+                  <small class="text-danger">User name is required.</small>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+
+              <!-- password -->
+              
+              <div class="form-group col-md-6" [ngClass]="{ 'bottom': userForm.get('password')?.invalid && userForm.get('password')?.touched }">
+                <label for="password">Password :</label>
+                <div class=" field-class">
+                  <div class="password-input">
+                    <input id="password" formControlName="password" required [type]="contentType" class="input-field" placeholder="Password" />
+                  <button class="password-toggle-btn" type="button" (click)="togglePasswordVisibility()">
+                    <mat-icon *ngIf="!blnShowPassword">visibility</mat-icon>
+                    <mat-icon *ngIf="blnShowPassword">visibility_off</mat-icon>
+                  </button>
+                  </div>
+                  <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched">
+                    <small class="text-danger">Password is required.</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- whatsapp number -->
+
+              <div class="form-group col-md-6 fg-right" >
+                <label for="whatsapp_number">Whatsapp Number :</label>
+                <div class=" field-class">
+                <input id="whatsapp_number" formControlName="whatsapp_number" type="text" class="input-field" placeholder="Whatsapp Number" />
+                </div>
+
+              </div>
+            </div>
+            <div class="form-row">
+
+              <!-- registration date -->
+
+              <div class="form-group col-md-6" [ngClass]="{ 'bottom': userForm.get('date_of_registration')?.invalid && userForm.get('date_of_registration')?.touched }">
+                <label for="date_of_registration">Date of Registration :</label>
+                <div class=" field-class">
+                <input id="date_of_registration" formControlName="date_of_registration" type="date" class="input-field" />
+                <div *ngIf="userForm.get('date_of_registration')?.invalid && userForm.get('date_of_registration')?.touched">
+                  <small class="text-danger">Registration date is required.</small>
+                </div>
+              </div>
+              </div>
+
+              <!-- broker -->
+               
+              <div class="form-group col-md-6 fg-right" [ngClass]="{ 'bottom': userForm.get('broker')?.invalid && userForm.get('broker')?.touched }">
+                <label for="broker">Broker :</label>
+                <div class=" field-class">
+                <select id="broker" formControlName="broker"  class="input-field">
+                    <option *ngFor="let broker of lstBroker" [value]="broker.id">{{broker.name}}</option>
+                   
+                </select>
+                <div *ngIf="userForm.get('broker')?.invalid && userForm.get('broker')?.touched">
+                  <small class="text-danger">Broker is required.</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="form-row">
+
+              <!-- mail id  -->
+
+              <div class="form-group col-md-6" [ngClass]="{ 'bottom': userForm.get('email')?.invalid && userForm.get('email')?.touched }">
+                <label for="email">Mail ID :</label>
+               <div class="field-class">
+                <input id="email" formControlName="email" type="email" class="input-field"  placeholder="Mail ID" />
+                <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+                  <small class="text-danger">Please enter a valid email address.</small>
+                </div>
+               </div>
+              </div>
+
+              <!-- server id  -->
+
+              <div class="form-group col-md-6 fg-right" [ngClass]="{ 'bottom': userForm.get('server_id')?.invalid && userForm.get('server_id')?.touched }">
+                <label for="server_id">Server ID :</label>
+                <div class="field-class">
+                <input id="server_id" formControlName="server_id" type="text" class="input-field" placeholder="Server ID" />
+                <div *ngIf="userForm.get('server_id')?.invalid && userForm.get('server_id')?.touched">
+                  <small class="text-danger">Server Id is required.</small>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="form-row">
+             
+              <!-- lot size -->
+
+              <div class="form-group col-md-6 "[ngClass]="{ 'bottom': userForm.get('lot_size')?.invalid && userForm.get('lot_size')?.touched }"
+              >
+                <label for="lot_size">Lot Size :</label>
+                <div class="field-class">
+                <input id="lot_size" formControlName="lot_size" type="text" class="input-field" placeholder="Lot Size" />
+                <div *ngIf="userForm.get('lot_size')?.invalid && userForm.get('lot_size')?.touched">
+                  <small class="text-danger">Lot size is required.</small>
+                </div>
+                </div>
+              </div>
+
+              <!-- platform -->
+
+              <div class="form-group col-md-6 fg-right" [ngClass]="{ 'bottom': userForm.get('platform')?.invalid && userForm.get('platform')?.touched }">
+                <label for="platform">Platform :</label>
+                <div class=" field-class">
+                <select id="platform" formControlName="platform"  class="input-field">
+                    <option *ngFor="let platform of lstPlatform" value="{{platform.value}}">{{platform.value}}</option>
+                   
+                </select>
+                <div *ngIf="userForm.get('platform')?.invalid && userForm.get('platform')?.touched">
+                  <small class="text-danger">Platform is required.</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            
+           <!-- action buttons -->
+
+            <div class="form-group d-flex ">
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary mr-2" (click)="onCancel()">Cancel</button>
+              <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+      
+</div>   
+<!-- -------------------------------------------------------------------------------------- -->
+</div>
+  
+     

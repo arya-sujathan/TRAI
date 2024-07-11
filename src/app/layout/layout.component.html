@@ -1,0 +1,17 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav mode="side" opened="true" class="container">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="Logo">
+    </div>
+    <mat-nav-list >
+    
+      <div *ngFor="let route of routes">
+        <mat-list-item [routerLink]="'/'+route.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" >
+          <span>{{route.path}}</span>
+
+        </mat-list-item>
+      </div>        
+    </mat-nav-list>
+  </mat-sidenav>
+
+</mat-sidenav-container>

@@ -1,0 +1,200 @@
+.add-user-container{
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+}
+  
+
+
+
+.main-content{
+  overflow: auto;
+  flex: 1;
+  height: 100vh;
+}
+  
+
+
+
+header .search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions label {
+  margin-right: 10px;
+}
+  
+  .actions button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .actions .buy {
+    background-color: green;
+  }
+  
+  .actions .buy:hover {
+    background-color: darkgreen;
+  }
+  
+  .actions .sell {
+    background-color: green;
+  }
+  
+  .actions .sell:hover {
+    background-color: darkgreen;
+  }
+  
+  .user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .content {
+    padding: 2%;
+  }
+  
+  .data-table {
+    // border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: auto;
+  }
+
+  
+  .data-table .table-header,
+  .data-table .table-row {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .data-table .table-header {
+    background-color: #000000;
+    font-weight: bold;
+  }
+  
+  .data-table .table-row div {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .no-data {
+    background-color: #ffcccc;
+    color: #cc0000;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  /* Fix for Angular Material Table */
+  .mat-elevation-z8 {
+    background-color: white !important;
+  }
+  
+  .mat-mdc-table tbody, .mat-mdc-table tfoot, .mat-mdc-table thead, .mat-mdc-cell, .mat-mdc-footer-cell, .mat-mdc-header-row, .mat-mdc-row, .mat-mdc-footer-row, .mat-mdc-table .mat-mdc-header-cell {
+    // background: inherit;
+    color: black;
+}
+
+
+::ng-deep .mat-mdc-table tbody, .mat-mdc-table tfoot, .mat-mdc-table thead, .mat-mdc-cell, .mat-mdc-footer-cell, .mat-mdc-header-row, .mat-mdc-row, .mat-mdc-footer-row, .mat-mdc-table .mat-mdc-header-cell,.mat-elevation-z8{
+  background-color: #f9f9f9 !important;
+}
+th{
+ border-bottom: 1px solid #a7a7a7 !important; 
+
+}
+td{
+ border-bottom: 1px solid #a7a7a7 !important; 
+}
+table{
+  padding-bottom: 2% !important;
+  padding-left: 2% !important;
+  padding-right: 2% !important;
+}
+.data-table{
+  background-color: #f9f9f9 !important;
+}
+.heading{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  // padding-left: 2%;
+  padding-top: 1%;
+  // padding-right: 2%;
+}
+.heading h1{
+  padding-left: 2%;
+}
+.filter-input{
+  border: 1px solid #6b6b6b;
+border-radius: 30px;
+padding: 1%;
+
+}
+.search-filter{
+  height: 2em;
+  margin-right: 2%;
+  display: flex;
+  // width: 20%;
+}
+.sort-btn{
+  display: flex;
+  border: 1px solid #6b6b6b;
+  border-radius: 30px;
+  margin-left: 2%;
+  background-color: #f9f9f9 !important;
+  
+  align-items: center;
+}
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-input {
+  padding-left: 30px; /* Adjust as needed */
+  height: 85%;
+}
+
+.input-container mat-icon {
+  position: absolute;
+  top: 50%;
+  left: 165px; /* Adjust as needed */
+  transform: translateY(-50%);
+}
+
+.mat-menu{
+  background-color: white !important;
+}
+::ng-deep .mat-mdc-menu-content{
+  background-color: #6b6b6b;
+  padding: 0 !important;
+  font-size: small !important;
+
+}
+::ng-deep.mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text{
+  font-size: smaller !important;
+text-align: center !important;
+}
+
+@media (max-width:550px) {
+  .sidebar{
+   width: 0;
+   }
+ }
+ 

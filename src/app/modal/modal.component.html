@@ -1,0 +1,20 @@
+<span mat-dialog-title class="dialog-title">{{data.action}} Item</span>
+<mat-dialog-content>
+  <form [formGroup]="form" class="main-form">
+    <div class="form-row">
+      <div class="form-group col-md-6 col-sm-12">
+        <label for="stopLoss">Stop Loss :</label>
+        <input id="stopLoss" formControlName="stopLoss" type="text" class="form-control" placeholder="stop loss" />
+      </div>
+      <div class="form-group col-md-6 col-sm-12 fg-right">
+        <label for="Target">Target :</label>
+        <input id="target" formControlName="target" type="text" class="form-control" placeholder="target" />
+      </div>
+     
+    </div>
+  </form>
+  <div class="btn-group">
+    <button class="btn btn-secondary" mat-button (click)="onNoClick()">Cancel</button>
+    <button class="btn btn-success" mat-button mat-dialog-close="form.value" [disabled]="!form.valid" (click)="onSubmit()">Ok</button>
+  </div>
+</mat-dialog-content>
